@@ -1,0 +1,216 @@
+
+V8 JavaScript Engine
+
+run the node file
+node hello.js
+-----------
+Different types of modules
+File System module
+https://nodejs.org/docs/latest-v15.x/api/fs.html
+
+----------------------
+
+Initialize npm in your project.
+npm init
+npm init -y
+-y : yes for all
+
+Use the website to get the node package : https://www.npmjs.com/
+
+npm i validator@13.7.0
+better to download the package with version.
+--------
+If u download the project, then u should get node_modules
+Run the command : npm install
+
+-----------------------
+
+Global npm Modules and nodemon
+nodemon
+npm install nodemon@2.0.15 -g
+
+Install nodemon globally
+
+--------------
+npm i nodemon@2.0.15 --save-dev
+To save nodemon as development dependency
+-------------------------------------
+Various Modules
+
+validator:
+npm i validator@13.7.0
+
+
+---------------------------------------
+nodemon app.js 
+
+To include the hbs changes automatically
+nodemon app.js -e js,hbs
+
+====================================================
+File System and Command Line Args
+
+Getting input from user
+from command prompt
+process.argv[2]
+
+----------------------------
+
+yargs
+npm i yargs@17.3.1
+
+node app.js add --title="Things to buy"
+node app.js --help
+node app.js --version
+
+const validator = require('validator')
+const yargs = require('yargs')
+const chalk = require('chalk')
+
+const fs = require('fs')
+//fs.writeFileSync('notes.txt', 'this is my text')
+
+console.log(validator.isEmail('test@gmail.com'))
+console.log(chalk.blue('Hello world!'))
+
+console.log(process.argv)
+
+//customize yargs version
+yargs.version('1.2.0')
+
+console.log(yargs.argv)
+
+node app.js add --title="Buy" --body="message for body"
+--------------------------------
+
+Debugging Node JS
+
+write debugger in the code. while running the application se the command: node inspect app.js
+In windows, use this command
+node --inspect-brk app.js
+
+chrome url : chrome://inspect/#devices
+
+-------------------------------------------
+
+                      Asynchronous NodeJS
+					  
+
+key
+3a20928f65ab00cd8c625526213f9dc9
+
+http://api.weatherstack.com/current?access_key=3a20928f65ab00cd8c625526213f9dc9&query=New York
+
+https://www.npmjs.com/package/postman-request
+
+npm i request@2.88.2
+
+call back Chaining
+
+==================================================
+
+Express JS
+http://expressjs.com/
+
+npm i express@4.17.2
+
+node src/app.js
+
+npm i hbs@4.2.0
+npm handlebars
+
+==================================================
+
+Mongo DB
+
+npm list mongodb
+to check the mongodb version
+
+https://docs.mongodb.com/drivers/node/current/fundamentals/connection/
+
+NodeJS + MongoDB
+https://www.youtube.com/watch?v=eYVGoXPq2RA
+
+
+mongod --dbpath=c:/users/mondo-data
+// In this folder mongo saves its data.
+
+db.version()
+
+MongoDB Node.JS Driver
+https://docs.mongodb.com/drivers/node/current/
+
+npm i mongodb@4.3.1
+
+console.log(results.insertedId) for insertOne
+console.log(results.insertedIds) for insertMany
+
+----------------------------
+
+Setting up Mongoose
+
+https://mongoosejs.com/
+ODM : Object Database Model
+npm i mongoose@6.1.8
+
+const me = new User({
+    name: 'Maddy',
+    age: 35
+})
+
+me.save()
+// This returns a promise.
+
+--------------------------
+sample code.
+const mongoose = require('mongoose')
+
+mongoose.connect('mongodb://127.0.0.1:27017/task-manager')
+
+const User = mongoose.model('User', {
+    name: {
+        type: String
+    },
+    age: {
+        type: Number
+    }
+})
+
+const me = new User({
+    name: 'Maddy',
+    age: 35
+})
+
+me.save().then((test)=> {
+ console.log(test)
+}).catch((error) => {
+  console.log('Error!', error)
+})
+
+Data Validation
+
+---------------------
+
+REST API using nodejs
+
+
+app.use(express.json())
+automatically parse incoming json to an object.
+
+==========================================
+
+ an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node 
+process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:514292) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+
+UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node 
+process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 2)
+
+
+=======================================
+Promise Chaining
+
+=======================================
+
+
