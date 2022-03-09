@@ -1,0 +1,35 @@
+tutorial
+https://www.mongodb.com/blog/post/quick-start-nodejs-mongodb-how-to-get-connected-to-your-database
+https://www.mongodb.com/blog/authors/lauren-schaefer/2
+https://www.youtube.com/watch?v=fbYExfeFsI0
+https://www.mongodb.com/blog/authors/lauren-schaefer
+https://www.guru99.com/node-js-mongodb.html
+
+https://github.com/mongodb-developer/nodejs-quickstart/blob/master/aggregation.js
+
+
+
+Performance
+https://bugwheels94.medium.com/performance-difference-in-mongoose-vs-mongodb-60be831c69ad
+==========================================
+mahesh
+learning890
+VrFQLBR1TRx4rSYZ
+
+mongodb+srv://mahesha:learning890@mflix.13m49.mongodb.net/test
+
+private key
+2502d6c3-342a-41d8-85e5-bfc8707e237e
+
+public key
+ycsqnyyt
+
+====================================================
+
+CRUD operation
+
+Aggregation framework
+match, group, sort, limit
+count, geoNear, project, unwind
+
+
