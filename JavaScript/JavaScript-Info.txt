@@ -1,0 +1,120 @@
+
+keywords let and var
+
+The keywords let and var both declare new variables in JavaScript. The difference between let and var is in the scope of the variables they create:
+
+Variables declared by let are only available inside the block where they’re defined.
+Variables declared by var are available throughout the function in which they’re declared.
+
+function varScoping() {
+  var x = 1;
+
+  if (true) {
+    var x = 2;
+    console.log(x); // will print 2
+  }
+
+  console.log(x); // will print 2
+}
+
+function letScoping() {
+  let x = 1;
+
+  if (true) {
+    let x = 2;
+    console.log(x); // will print 2
+  }
+
+  console.log(x); // will print 1
+}
+
+Note: Ideal way is to use let variable
+--------------------------------------- 
+
+Datatypes and ECMA standards
+
+"use strict"; // treat all JS code as newer version
+
+---------------------
+
+Convert from string to number
+
+ let score= "5"
+
+ console.log(typeof(score));
+
+ let valueInNumber = Number(score);
+ console.log(typeof(valueInNumber));
+ 
+---------------------------------
+
+Number to Boolean conversion
+
+let isLoggedIn = 1
+
+let boolLoggedIn = Boolean(isLoggedIn)
+console.log(boolLoggedIn);
+
+---------------------------
+
+Array in Javascript 
+
+const myArr = [5,7,3,2,1];
+
+console.log(myArr);
+console.log(myArr.length);
+
+myArr.push(6);
+console.log(myArr);
+
+
+Copy an array to another
+const myArr = [5,7,3,2,1];
+
+const newArr = ["hi","hello"];
+
+//const resArr = [myArr, ...newArr];
+
+const resArr = [...myArr];
+
+myArr[0] =99;
+
+console.log(myArr);
+console.log(resArr);
+console.log(resArr.length);
+
+-----------------------
+Read Json object
+
+const user = {
+    name: "Mahesh",
+    "full name":"Mahesh Gunaje",
+    age:18,
+    location:"Blore",
+    email:"abc@gmail.com"
+}
+
+console.log(user.name);
+console.log(user["location"]);
+console.log(user["full name"]);
+
+---------------------------------
+const myUser = {}
+
+myUser.id="123"
+myUser.name="mahesh"
+
+console.log(myUser);
+
+----------------------------
+JSON
+
+get sample json data
+https://randomuser.me/
+
+
+
+----------------------------------
+Queries
+
+A lot of shiny new features came out with ES2015 (ES6)
