@@ -1,4 +1,8 @@
+Queries
 
+A lot of shiny new features came out with ES2015 (ES6)
+
+=======================================
 keywords let and var
 
 The keywords let and var both declare new variables in JavaScript. The difference between let and var is in the scope of the variables they create:
@@ -112,9 +116,48 @@ JSON
 get sample json data
 https://randomuser.me/
 
+-----------------------------
 
+Arrow Function
 
+part of ES6 function
+
+const testMethod = () => {
+    console.log("hello");
+}
+
+testMethod();
+
+---------------
+
+const addMethod = (num1, num2) => {
+    return num1 + num2;
+}
+
+const addNewMethod = (num1, num2) =>  (num1 ===3 ? 99: 100)
+
+let res = addNewMethod(31,7);
+console.log(res);
+
+----------
+const addNewMethod = (num1, num2) =>  "hello world"
+
+let res = addNewMethod(31,7);
+console.log(res);
+
+--------------
+const testMethod = (num1, num2) => ({username:"mahesh"})
+
+console.log(testMethod(5,6));
 ----------------------------------
-Queries
+IIFE
+Immediately Invoked Function Expressions IIFE
 
-A lot of shiny new features came out with ES2015 (ES6)
+(function testMethod(){
+    console.log("connect to DB");
+})()
+
+this will execute the function
+
+wrapping the function, then call the function
+------------
